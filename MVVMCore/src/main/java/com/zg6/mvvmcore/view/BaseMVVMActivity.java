@@ -43,10 +43,10 @@ public abstract class BaseMVVMActivity<VM extends BaseViewModel,Binding extends 
 
     /**
      * 设置页面数据源
-     * @param 
-     * @return 
+     * @param
+     * @return
      * @author zhangyue
-     * @time 2021/12/7 13:03
+     * @time 2021/12/7 14:07
      */ 
     private void setVars(Binding mDataBinding, HashMap<Integer, Object> mMap){
         if (null==mMap||mMap.size()==0||mDataBinding==null){

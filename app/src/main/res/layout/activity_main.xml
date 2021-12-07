@@ -1,18 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <data>
+        <variable
+            name="user"
+            type="androidx.lifecycle.MutableLiveData&lt;com.zg6.nba.entity.UserEntity>" />
+        <variable
+            name="owner"
+            type="com.zg6.nba.view.MainActivity" />
+    </data>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <EditText
+            android:text="@={user.phoneNumber}"
+            android:hint="please input phonenumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></EditText>
+        <EditText
+            android:text="@={user.pwd}"
+            android:hint="please input password"
+            android:inputType="textPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></EditText>
+        <Button
+            android:onClick="@{(view)->owner.onClickForLogin(view)}"
+            android:text="Login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></Button>
+    </LinearLayout>
+
+</layout>

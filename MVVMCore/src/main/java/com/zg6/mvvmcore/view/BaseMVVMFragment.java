@@ -76,7 +76,7 @@ public abstract class BaseMVVMFragment<VM extends BaseViewModel,Binding extends 
      * @param 
      * @return 
      * @author zhangyue
-     * @time 2021/12/7 13:57
+     * @time 2021/12/7 13:59
      */ 
     protected abstract VM createViewModel();
 }
