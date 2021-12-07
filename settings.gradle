@@ -1,2 +1,3 @@
+include ':MVVMCore'
 include ':app'
 rootProject.name = "ZG61905Project"
