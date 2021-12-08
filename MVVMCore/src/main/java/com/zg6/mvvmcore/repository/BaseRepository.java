@@ -30,6 +30,7 @@ public class BaseRepository{
      * @time 2021/12/7 11:01
      */
     private void injectModel() {
+
         //      能拿到当前类的public及 父类的public字段   getClass().getFields();
         //Declared 能当前类的所有字段 包括private的
         Field[] fields = getClass().getDeclaredFields();

@@ -30,7 +30,6 @@ import androidx.databinding.ViewDataBinding;
 public abstract class BaseMVVMFragment<VM extends BaseViewModel,Binding extends ViewDataBinding> extends BaseLazyFragment {
     protected VM mViewModel;
     protected Binding mBinding;
-
     private HashMap<Integer,Object> mMap=new HashMap<>();
     @Override
     protected View createView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
